@@ -1,0 +1,44 @@
+body {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'futura';
+	background-image: url("https://img00.deviantart.net/a92a/i/2011/195/a/9/another_day_in_paradise_by_priteeboy-d3r0849.jpg");
+ 	color: red;
+ 	background-size: 100% auto;
+
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+
+td {
+border: 1px solid red;
+height: 200px;
+width: 200px;
+font-size: 100px;
+}
+
+#players {
+  margin-left:auto; 
+  margin-right:auto;
+  padding: 20px 10px 10px 10px;
+  width: 80%; 
+  text-align: left;
+}
+
+.button {
+	float:right;
+}
+
+.square {
+	border-radius: "3"
+}
+
+
+
+
