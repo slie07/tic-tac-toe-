@@ -1,6 +1,7 @@
 console.log("hello");
 function startGame() {
 	document.turn ="X";
+	document.winner = null;
 	setMessage(document.turn + " Start Please ");
 }
 
@@ -9,7 +10,9 @@ function setMessage(msg) {
 }
 
 function nextMove(square) {
-	if (square.innerText == '') {
+	if (document.winner != null){
+		setMessage(document.turn + " already won hit the New Game Button ");
+	}else if (square.innerText == '') {
 		square.innerText = document.turn;
 		switchTurn();
 	} else {
@@ -21,6 +24,7 @@ function nextMove(square) {
 function switchTurn() {
 	if(checkForWinner(document.turn)) {
 		setMessage(" Congrats " + document.turn + " You Won Duuuh ! ");
+		document.winner = document.turn;
 	}
 	else if (document.turn == "X") {
 		document.turn = "O";
