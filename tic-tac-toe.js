@@ -1,5 +1,9 @@
 console.log("hello");
 function startGame() {
+	for(var i = 1; i <= 9; i++) {
+		clearBox(i);
+	}
+
 	document.turn ="X";
 	document.winner = null;
 	setMessage(document.turn + " Start Please ");
@@ -11,7 +15,7 @@ function setMessage(msg) {
 
 function nextMove(square) {
 	if (document.winner != null){
-		setMessage(document.turn + " already won hit the New Game Button ");
+		setMessage(document.turn + " already won hit the Start Game Button ");
 	}else if (square.innerText == '') {
 		square.innerText = document.turn;
 		switchTurn();
@@ -67,6 +71,9 @@ function getBox (number) {
 
 }
 
+function clearBox(number) {
+	document.getElementById("s" + number).innerText = "";
+}
 
 
 
