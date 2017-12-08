@@ -19,13 +19,18 @@ function nextMove(square) {
 }
 
 function switchTurn() {
-	if (document.turn == "X") {
+	if(checkForWinner(document.turn)) {
+		setMessage(" Congrats " + document.turn + " You Won Duuuh ! ");
+	}
+	else if (document.turn == "X") {
 		document.turn = "O";
+		setMessage(" It's " + document.turn + " turn !!");
 	} else {
 		document.turn = "X";
+		setMessage(" It's " + document.turn + " turn !!");
 	}
 	/* to take the turn mesaage */
-	setMessage(" It's " + document.turn + " turn !!");
+	
 }
 
  /* setting the winner */
