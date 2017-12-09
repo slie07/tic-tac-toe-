@@ -10,8 +10,10 @@ function startGame() {
 }
 
 function setMessage(msg) {
-	/* setting the meassage */ document.getElementById("message").innerText = msg;
+	/* setting the meassage */ 
+	document.getElementById("message").innerText = msg;
 }
+
 
 function nextMove(square) {
 	if (document.winner != null){
@@ -30,6 +32,12 @@ function switchTurn() {
 		setMessage(" Congrats " + document.turn + " You Won Duuuh ! ");
 		document.winner = document.turn;
 	}
+	else
+		if(CheckforTie())
+            {
+                setMessage("Its a TIE Sucker.!! Play again...!!!");
+            }
+
 	else if (document.turn == "X") {
 		document.turn = "O";
 		setMessage(" It's " + document.turn + " turn !!");
@@ -65,6 +73,18 @@ function checkRow (a, b, c, move) {
 	}
 	return result;
 }
+
+  function CheckforTie()
+        {
+            for(var i=1;i<10;i++)
+            {
+
+              if(getBox(i)=="")
+               return false;
+            }
+            return true;
+        }
+
 
 function getBox (number) {
 	return document.getElementById("s" + number).innerText;
