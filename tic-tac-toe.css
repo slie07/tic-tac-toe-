@@ -18,15 +18,24 @@ table {
 	font-size: 30px;
 	font-family: "futura";
 	text-decoration: none;
-	color: "red"
+	color: "red";
 }
-
-
 td {
 border: 1px solid red;
 height: 200px;
 width: 200px;
 font-size: 100px;
+}
+
+
+
+.Square.O {
+  color: green;
+
+}
+
+.Square.X {
+  color: blue;
 }
 
 #players {

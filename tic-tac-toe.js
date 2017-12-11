@@ -4,10 +4,12 @@ function startGame() {
 		clearBox(i);
 	}
 
-	document.turn ="X";
+
+	document.turn ="X" ;
 	document.winner = null;
 	setMessage(document.turn + " Start Please ");
 }
+
 
 function setMessage(msg) {
 	/* setting the meassage */ 
@@ -20,6 +22,7 @@ function nextMove(square) {
 		setMessage(document.turn + " already won hit the Start Game Button ");
 	}else if (square.innerText == '') {
 		square.innerText = document.turn;
+		square.className += " " + document.turn;
 		switchTurn();
 	} else {
 		setMessage("Pick another square");
@@ -95,6 +98,8 @@ function clearBox(number) {
 	document.getElementById("s" + number).innerText = "";
 }
 
+function myFunction() {
+    var element = document.getElementByClass("Square");
+    element.classList.add("X");
+}
 
-
-	// body...
